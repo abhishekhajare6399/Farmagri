@@ -1,0 +1,13 @@
+for runing the plant disease code 
+
+1. cd C:\xampp\htdocs\Farmagri\farmagri\env
+2. flask run
+
+
+Email Funaction add 
+sendmail file to xampp sendmail folder
+
+add .php file to php folder
+
+database
+create farmagri.main database exmport .sql file

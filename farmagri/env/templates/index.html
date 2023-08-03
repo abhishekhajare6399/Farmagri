@@ -1,0 +1,265 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Farmagri</title>
+        <link rel="icon" href="{{ url_for('static', filename='images/Agriculture _crop.png') }}" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <style>
+      
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f5f9;
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 220px;
+  height: 100%;
+  background: #4b4276;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #594f8d;
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+ 
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  margin-left: 220px;
+}
+
+.wrapper .main_content .header{
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+  
+}
+
+.wrapper .main_content .info{
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+  margin-bottom: 20px;
+}
+.divider-text{
+  position: relative;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding : 5px;
+  
+}
+.divider-text span{
+  padding: 7px;
+  font-size: 12px;
+  position: relative;
+  z-index: 2;
+}
+.divider-text::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 5px solid rgb(11, 10, 10);
+  top: 55%;
+  left: 0;
+  z-index: 1;
+}
+.container-fluid {
+  margin :10px;
+}
+.bg-grey {
+  background-color: #f6f6f6;
+}
+.content {
+  margin-top: 100px;
+  margin-left: 200px;
+  max-width: 700px;
+  border: 1px solid black;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+.content1 {
+  max-width: 1500px;
+  border: 1px solid black;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: none;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+    </style>
+    <body>
+      
+
+<body>
+
+  <div class="wrapper">
+      <div class="sidebar">
+      <div class="row" style="padding:5px">
+      <div class="col-sm-3">
+      <img src="{{ url_for('static', filename='images/Agriculture _crop.png') }}" alt="" style="padding:5px;width:50px;height:50px;">
+      </div>
+      <div class="col-sm-9">
+          <h3 style="color:white;padding:10px;">Farmagri</h3>
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-11">
+            <p style="font-family:Serif;color:white;text-align:left;font-size:15px;">Registeration Id : {{id}}.</p>
+          </div>
+      </div>
+
+
+          <ul>
+              <li><a href="http://localhost/Farmagri/uhome.php"><i class="fas fa-home"></i>Home</a></li>
+              <li><a href="http://localhost/Farmagri/umarket.php"><i class="fas fa-shopping-cart"></i>Market</a></li>
+              <li><a href="http://localhost/Farmagri/usell.php"><i class="fas fa-address-card"></i>Sell</a></li>
+              <li><a href="http://localhost/Farmagri/ufertilizer.php"><i class="fas fa-project-diagram"></i>Fertilizer</a></li>
+              <li><a href="http://localhost/Farmagri/ugoodprice.php"><i class="fas fa-list"></i></i>Goods Price</a></li>
+              <li><a href="#"><i class="fas fa-blog"></i>Detect</a></li>
+              <li><a href="http://localhost/Farmagri/unews.php"><i class="fas fa-newspaper"></i>News</a></li>
+              <li><a href="http://localhost/Farmagri/ubuyer.php"><i class="fas fa-list"></i>Buyer</a></li>
+              <li><a href="http://localhost/Farmagri/uhistory.php"><i class="fas fa-history"></i>History</a></li>
+              <li><a href="http://localhost/Farmagri/ulogout.php"><i class="fas fa-sign-out"></i>Logout</a></li>
+          </ul> 
+          <div class="social_media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a><br>
+        </div>
+      </div>
+      <div class="main_content">
+          <div class="header">
+          <div class="row">
+      <div class="col-sm-6">
+         <h3 style="font-family:Serif;color:black;text-align:left;font-size:25px">Welcome {{name}}.</h3>
+          </div>
+          
+          <div class="col-sm-4">
+          <form class="d-flex" action ="http://localhost/Farmagri/usearch.php" method ="POST">
+          <input class="form-control me-2" type="search" name="search" placeholder="Search...." aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" name="submit"><i class ="fa fa-search"></i></button>
+        </form>
+        </div>
+        <div class="col-sm-2">
+        <button class="btn btn-outline-danger" onclick="openForm1()"><i class ="fa fa-bell"></i></button>
+        <button class="btn btn-outline-warning" onclick="openForm2()"><i class="fas fa-hands-helping"></i></button>&nbsp;&nbsp;
+        </div>
+        </div>
+          </div>  
+
+
+      
+        <div class="container bg-grey" style=" padding: 8px 8px;margin :10px;">
+          <h1 style="font-family:Serif;color:black;text-align:center;font-size:30px;">Plant Disease Prediction.</h1>
+<p class = "divider-text"></p>
+
+
+
+<div class="content">
+  <form method="POST" action="/submit" enctype="multipart/form-data">
+    <input type="hidden" name="Lid" value="{{id}}">
+    <input type="hidden" name="name" value="{{name}}">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputState">Select the Plant</label>
+        <select name="plant" id="inputState" class="form-control">
+          <option >Select Plant</option>
+          <option value="Cotton">Cotton</option>
+          <option value="Potato">Potato</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="exampleFormControlFile1">Upload the Plant leaf Image :</label>
+        <input type="file" id="image" name="image" accept="image/*" required><br><br>
+      </div>
+      <div class="form-group col-md-5"></div>
+      <div class="form-group col-md-6">
+        <input type="submit" value="Submit" class="btn btn-outline-primary">
+      </div>
+    </div>
+
+  </form>
+</div>
+
+
+
+
+
+
+        </div>
+    </body>
+</html>
+
+
+
+
+
